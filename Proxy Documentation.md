@@ -38,6 +38,11 @@ the Server should to be restarted.</p>
 are set manually, the user can provide a nearer expiry time for volatile tables and an expiry time further into the future for tables 
 that rarely change.</p>
 
+## Dealing with Thread Interference
+<p>•	The program was implemented with the ability to handle more than one Client requesting data from the database at the same time. This is referred to as multithreading.</p> 
+<p>•	Since multiple threads might be running on the Proxy at the same time, thread interference might occur. Thread interference happens when the processes of two different threads acting on the same data overlap. The Server handles this problem by using synchronization. Thread synchronization prevents this interference between threads and ensures that the process of one thread isn’t interrupted or stopped by the processes of another.</p>
+
+
 ## RAM Storage for Cached Information vs. Permanent Storage
 <p>•	RAM storage for cached information can be accessed quickly.</p>
 <p>•	This speed comes at a cost, literally. RAM is expensive and as a result computers don’t have much of it. At least not enough to 
