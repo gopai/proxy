@@ -40,7 +40,9 @@ that rarely change.</p>
 
 ## Dealing with Thread Interference
 <p>•	The program was implemented with the ability to handle more than one Client requesting data from the database at the same time. This is referred to as multithreading.</p> 
-<p>•	Since multiple threads might be running on the Proxy at the same time, thread interference might occur. Thread interference happens when the processes of two different threads acting on the same data overlap. The Server handles this problem by using synchronization. Thread synchronization prevents this interference between threads and ensures that the process of one thread isn’t interrupted or stopped by the processes of another.</p>
+<p>•	Since multiple threads might be running on the Server at the same time, thread interference might occur. Thread interference happens when the processes of two different threads acting on the same data overlap. The Server handles this problem by using synchronization. Thread synchronization prevents this interference between threads and ensures that the process of one thread isn’t interrupted or stopped by the processes of another.</p>
+<p>•  When multiple Clients request data from the same database table at the same time, only one request is sent to the Server by the Proxy.</p>
+<p>•	The Proxy then returns the data to the Clients one at a time in order of connection, that is, the Client who made the first connection receives its data first, when that process is done the Client with the second connection receives its data next, and so forth.</p>
 
 
 ## RAM Storage for Cached Information vs. Permanent Storage
