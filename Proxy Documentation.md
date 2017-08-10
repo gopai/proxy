@@ -1,3 +1,4 @@
+
 ## Brief Description
 <p>•	The Client prompts the user to enter an SQL statement, the beginning value of the row set, and the ending value of the row set. 
 The SQL statement identifies the table the rows should be retrieved from and the beginning and ending values define the range of the 
@@ -44,6 +45,15 @@ that rarely change.</p>
 <p>•  When multiple Clients request data from the same database table at the same time, only one request is sent to the Server by the Proxy.</p>
 <p>•	The Proxy then returns the data to the Clients one at a time in order of connection, that is, the Client who made the first connection receives its data first, when that process is done the Client with the second connection receives its data next, and so forth.</p>
 
+## Timing
+<p>•	We know that retrieving cached data should be quicker than getting the same data straight from the Server. To test whether this was true for the program, different sections of the program were timed.</p>
+<p>•	The server response time and the cache response time were the blocks of code timed.</p>
+<p>•	There were four categories I was testing; multiple Clients retrieving data from the Server, multiple Clients receiving data from the cache, one Client retrieving data from the Server, and one Client retrieving data from the cache.</p>
+<p>•	Two tables of significantly different sizes were used and both query requests had the four groups, so in total eight different groups were used to gather time information over twenty runs.</p>
+<p>•	The two tables used were Switches, which has 27 rows, and Terminals, which contains 271,098 rows.</p>
+<p>•	The findings are recorded in the graph below. The values for Terminals are represented by the dark grey graphs and Switches by the light grey graphs.</p>
+
+![alt text](https://github.com/gopai/proxy/blob/master/Timing.png)
 
 ## RAM Storage for Cached Information vs. Permanent Storage
 <p>•	RAM storage for cached information can be accessed quickly.</p>
