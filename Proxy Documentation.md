@@ -65,3 +65,10 @@ memory running out and the program failing.</p>
 <p>•	The trade-off however, is speed.</p>
 <p>•	RAM storage for cached data reduces latency associated with processing which ultimately improves user experience through faster 
 performance.</p>
+<p>•	Using the VisualVM to observe what happens when running different queries, we see that the heap size adjusts accordingly.</p>
+
+![alt text](https://github.com/gopai/proxy/blob/master/VisualVM.png)
+
+<p>•	When executing a large table, the heap size and the used heap both spike up and with a small table, the heap size values drop from the ones recorded for the large table.</p>
+<p>•	The heap size remains constant with subsequent execution of smaller tables even though the used heap fluctuates.</p>
+<p>•	This is because garbage collection frees up memory which leads to the used heap size varying while the heap size stays the same.</p>
