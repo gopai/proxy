@@ -17,8 +17,7 @@ Proxy.</p>
 <p>•	The Client initially requests information, entered by the user, from the database. This can be an entire row set or just a portion 
 of the row set. The arrows labeled ‘A’ represent the Client-to-database route with the Client as the requester and the database as the 
 supplier of the data.</p>
-<p>•	From the diagram, we can see that the Proxy, given its position, acts as a literal middleman. The Proxy prevents direct 
-communication between the Client and the database. Instead, when the Client first asks for some data, the Proxy takes this request and 
+<p>•	From the diagram, we can see that the Proxy, given its position, acts as a literal middleman. The Proxy prevents direct communication between the Client and the database. Instead, when the Client first asks for some data, the Proxy takes this request and 
 sends it up to the database. The database receives the Client’s request via the Proxy and hands back the entire table to the Proxy. 
 This marks the end of the ‘A’ arrows and the start of the ‘B’ arrows.</p>
 <p>•	The Proxy receives the data but instead of proceeding to the final ‘B’ arrow it takes a slight detour to the ‘C’ arrow pointing 
@@ -50,7 +49,7 @@ that rarely change.</p>
 <p>•	The server response time and the cache response time were the blocks of code timed.</p>
 <p>•	There were four categories I was testing; multiple Clients retrieving data from the Server, multiple Clients receiving data from the cache, one Client retrieving data from the Server, and one Client retrieving data from the cache.</p>
 <p>•	Two tables of significantly different sizes were used and both query requests had the four groups, so in total eight different groups were used to gather time information over twenty runs.</p>
-<p>•	The two tables used were Switches, which has 27 rows, and Terminals, which contains 271,098 rows.</p>
+<p>•	The two tables used were Switches, which has 27 rows, and Terminals, which contains 271,100 rows.</p>
 <p>•	The findings are recorded in the graph below. The values for Terminals are represented by the dark grey graphs and Switches by the light grey graphs.</p>
 
 ![alt text](https://github.com/gopai/proxy/blob/master/Timing.png)
